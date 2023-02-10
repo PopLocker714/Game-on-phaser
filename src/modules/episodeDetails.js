@@ -24,12 +24,12 @@ export function render(data) {
     window.history.back();
   });
 
-  function createList(dataList, titleName) {
+  function createList(dataList, listTitleName) {
     const listTitle = document.createElement('h2');
     const list = document.createElement('ul');
     listTitle.classList.add('text-2xl', 'font-bold', 'mb-2');
     list.classList.add('list-disc', 'space-y-2', 'pl-6', 'text-sm', 'mb-3');
-    listTitle.textContent = titleName;
+    listTitle.textContent = listTitleName;
     list.role = 'list';
 
     dataList.forEach((planet) => {
