@@ -24,7 +24,7 @@ export function render(data) {
     window.history.back();
   });
 
-  function createList(dataPlanets, titleName) {
+  function createList(dataList, titleName) {
     const listTitle = document.createElement('h2');
     const list = document.createElement('ul');
     listTitle.classList.add('text-2xl', 'font-bold', 'mb-2');
@@ -32,7 +32,7 @@ export function render(data) {
     listTitle.textContent = titleName;
     list.role = 'list';
 
-    dataPlanets.forEach((planet) => {
+    dataList.forEach((planet) => {
       const li = document.createElement('li');
       li.textContent = planet.name;
       list.append(li);
